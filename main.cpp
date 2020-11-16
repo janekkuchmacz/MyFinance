@@ -17,7 +17,6 @@ int main()
             {
             case '1':
                 financeManager. userRegistration();
-                //financeManager. displayAllUsers();
                 break;
             case '2':
                   financeManager. userSignIn();
@@ -40,27 +39,26 @@ int main()
             switch (choice)
             {
             case '1':
-                //ksiazkaAdresowa.dodajAdresata();
+                financeManager.addIncome();
+
                 break;
             case '2':
-                //ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
+                financeManager.addExpense ();
                 break;
             case '3':
-                //ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
+                financeManager.showMonthBalance();
                 break;
             case '4':
-               // ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+                financeManager.showPreviousMonthBalance();
                 break;
             case '5':
-               // ksiazkaAdresowa.usunAdresata();
-                //idUsunietegoAdresata = usunAdresata(adresaci);
-                //idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
+                financeManager.showBalanceForTheSelectedPeriodOfTime();
                 break;
             case '6':
-                //ksiazkaAdresowa.edytujAdresata();
+                financeManager.passwordChange();
                 break;
             case '7':
-                //ksiazkaAdresowa.edytujAdresata();
+                financeManager.setSignedUserId(0);
                 break;
             }
         }

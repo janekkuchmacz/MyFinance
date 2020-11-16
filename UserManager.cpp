@@ -6,7 +6,7 @@ void UserManager:: userRegistration()
 
     users.push_back(user);
 
-    //plikzUzytkownikami.dopiszUzytkownikaDoPliku(uzytkownik);
+    usersFile.addUserToFile(user);
 
     cout << endl << "Registration complited" << endl << endl;
     system("pause");
@@ -112,4 +112,36 @@ int UserManager::userSignIn()
 int UserManager::getSignedUserId()
 {
     return signedUserId;
+}
+void UserManager::setSignedUserId(int newUserId)
+{
+    signedUserId=newUserId;
+}
+void UserManager::passwordChange()
+{
+    string newPassword = "";
+    cout << "Enter new password: ";
+    newPassword = enterLine();
+
+    for (int i=0; i<users.size(); i++)
+    {
+        if (users[i].getUserId() == signedUserId)
+        {
+            users[i].setPassword(newPassword);
+            cout << "Password successfully changed." << endl << endl;
+            system("pause");
+        }
+    }
+    usersFile.addAllUsersToFile(users);
+}
+bool UserManager::userSignedIn()
+{
+    if (signedUserId>0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }

@@ -7,6 +7,7 @@
 #include<sstream>
 
 #include "User.h"
+#include "UsersFile.h"
 
 
 using namespace std;
@@ -21,15 +22,22 @@ class UserManager
         string enterLine();
         bool loginExists (string login);
 
+        UsersFile usersFile;
+
     public:
         UserManager ()
         {
            signedUserId=0;
+           users=usersFile.loadUsersFromFile();
         }
         void userRegistration();
         void displayAllUsers();
         int userSignIn();
         int getSignedUserId();
+        void setSignedUserId(int newUserId);
+        void passwordChange();
+        bool userSignedIn();
+
 
 };
 
