@@ -19,7 +19,7 @@ class ExpenseFile
 public:
     ExpenseFile():EXPENSES_FILE_NAME("expenses.xml")
     {
-
+        lastExpenseId=0;
     }
     void addExpenseToFile (Expense expense);
     int getLastExpenseId();

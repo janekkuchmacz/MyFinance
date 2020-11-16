@@ -19,7 +19,7 @@ class IncomesFile
 public:
     IncomesFile():INCOMES_FILE_NAME("incomes.xml")
     {
-
+        lastIncomeId=0;
     }
     void addIncomeToFile (Income income);
     int getLastIncomeId();

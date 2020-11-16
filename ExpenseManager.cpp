@@ -139,7 +139,7 @@ void ExpenseManager::displayAllExpensesFromThisMonth ()
          cout<<"Subject: "<<expenses[i].getItem()<<endl;
          cout<<"The amount of the expense: "<<expenses[i].getAmount()<<endl;
          }
-         cout<<endl;
+
      }
  }
  float ExpenseManager::displaySumOfExpensesFromSelectedPeriodOfTime(int startDate, int finishDate)

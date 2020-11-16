@@ -49,6 +49,11 @@ float AuxiliaryMethods::replaceCommaWithDot (string amount)
           {
               amountWithDot = amountWithDot + ".";
           }
+          else if (amount[i]+0==46)
+          {
+              amountWithDot = amountWithDot + ".";
+          }
+
       }
 
   amountWithDotFloat=atof(amountWithDot.c_str());

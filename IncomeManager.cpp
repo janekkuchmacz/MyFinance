@@ -138,7 +138,7 @@ string IncomeManager:: enterLine()
          cout<<"Subject: "<<incomes[i].getItem()<<endl;
          cout<<"The amount of the income: "<<incomes[i].getAmount()<<endl;
          }
-         cout<<endl;
+
      }
  }
 float IncomeManager::displaySumOfIncomesFromSelectedPeriodOfTime(int startDate, int finishDate)
